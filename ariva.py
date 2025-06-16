@@ -49,9 +49,9 @@ console = Console(theme=custom_theme_dark)
 
 ARIVA_BANNER = """
    ╔══════════════════════════════════════╗
-   ║       ✨ ARIVA ELITE SMS SYSTEM ✨    ║
-   ║       Developer By Anonymous          ║
-   ║       Channel: t.me/arivatools        ║
+   ║    ✨ BANSHEENİZM SMS SYSTEM ✨     ║
+   ║    Developer By Bansheenizm          ║
+   ║    Channel: t.me/millisanalteskilat  ║
    ╚══════════════════════════════════════╝
 """
 
@@ -94,7 +94,7 @@ def print_header():
         border_style="border",
         box=box.DOUBLE,
         padding=(1, 2),
-        title=Text("Ariva Elite", style="gradient2"),
+        title=Text("Made by Bansheenizm", style="gradient2"),
         title_align="left"
     ))
 
@@ -102,7 +102,7 @@ def print_header():
     table.add_column(style="gradient3")
     table.add_column(style="cyan")
     table.add_row("Servis Sayısı", f"{len(servisler_sms)}")
-    table.add_row("Geliştirici", "@sametex3")
+    table.add_row("Geliştirici", "@Bansheenizm")
     table.add_row("Tema", current_theme.capitalize())
     console.print(table)
     console.print()
@@ -135,7 +135,7 @@ while True:
         )
         console.print(Panel(
             help_text,
-            title=Text("Ariva Elite Kısayollar", style="prompt"),
+            title=Text("Bansheenizm Kısayollar", style="prompt"),
             border_style="border",
             box=box.MINIMAL,
             padding=(1, 2)
@@ -150,7 +150,7 @@ while True:
     )
     console.print(Panel(
         menu_content,
-        title=Text("Ariva Elite Menü", style="prompt"),
+        title=Text("Bansheenizm Menü", style="prompt"),
         border_style="border",
         box=box.ROUNDED,
         padding=(1, 4)
@@ -171,7 +171,7 @@ while True:
             continue
         menu = int(choice)
     except ValueError as e:
-        error_msg = "Hatalı giriş! Ariva Elite geçerli bir seçim bekliyor."
+        error_msg = "Hatalı giriş! Bansheenizm geçerli bir seçim bekliyor."
         console.print(Panel(
             Text(error_msg, style="warning"),
             border_style="red",
@@ -201,7 +201,7 @@ while True:
                             tel_liste.append(i)
                 sonsuz = ""
             except FileNotFoundError as e:
-                error_msg = "Hatalı dosya dizini! Ariva Elite doğru bir dizin bekliyor."
+                error_msg = "Hatalı dosya dizini! Bansheenizm doğru bir dizin bekliyor."
                 console.print(Panel(
                     Text(error_msg, style="warning"),
                     border_style="red",
@@ -218,7 +218,7 @@ while True:
                 tel_liste.append(tel_no)
                 sonsuz = "(Sonsuz için enter)"
             except ValueError as e:
-                error_msg = "Hatalı telefon numarası! Ariva Elite geçerli bir numara bekliyor."
+                error_msg = "Hatalı telefon numarası! Bansheenizm geçerli bir numara bekliyor."
                 console.print(Panel(
                     Text(error_msg, style="warning"),
                     border_style="red",
@@ -238,7 +238,7 @@ while True:
             if mail and ("@" not in mail or ".com" not in mail):
                 raise ValueError
         except ValueError as e:
-            error_msg = "Hatalı mail adresi! Ariva Elite geçerli bir mail bekliyor."
+            error_msg = "Hatalı mail adresi! Bansheenizm geçerli bir mail bekliyor."
             console.print(Panel(
                 Text(error_msg, style="warning"),
                 border_style="red",
@@ -257,7 +257,7 @@ while True:
             )
             kere = int(kere) if kere else None
         except ValueError as e:
-            error_msg = "Hatalı giriş! Ariva Elite sayısal bir değer bekliyor."
+            error_msg = "Hatalı giriş! Bansheenizm sayısal bir değer bekliyor."
             console.print(Panel(
                 Text(error_msg, style="warning"),
                 border_style="red",
@@ -274,7 +274,7 @@ while True:
                 Text("Kaç saniye aralıkla göndermek istiyorsunuz", style="prompt")
             ))
         except ValueError as e:
-            error_msg = "Hatalı giriş! Ariva Elite sayısal bir değer bekliyor."
+            error_msg = "Hatalı giriş! Bansheenizm sayısal bir değer bekliyor."
             console.print(Panel(
                 Text(error_msg, style="warning"),
                 border_style="red",
@@ -295,7 +295,7 @@ while True:
                 TimeElapsedColumn(),
                 console=console
             ) as progress:
-                task = progress.add_task("Ariva Elite SMS Gönderimi", total=None)
+                task = progress.add_task("Bansheenizm SMS Gönderimi", total=None)
                 while True:
                     for attribute in servisler_sms:
                         try:
@@ -323,14 +323,14 @@ while True:
                     TimeElapsedColumn(),
                     console=console
                 ) as progress:
-                    task = progress.add_task("Ariva Elite SMS Gönderimi", total=kere)
+                    task = progress.add_task("Bansheenizm SMS Gönderimi", total=kere)
                     while sms.adet < kere:
                         for attribute in servisler_sms:
                             if sms.adet == kere:
                                 break
                             try:
                                 exec(f"sms.{attribute}()")
-                                progress.update(task, advance=1, description=f"Ariva Elite: {attribute} gönderildi")
+                                progress.update(task, advance=1, description=f"Bansheenizm: {attribute} gönderildi")
                                 total_sms_sent += 1
                                 logging.info(f"SMS sent: {attribute} to {i}")
                                 sleep(aralik)
@@ -353,7 +353,7 @@ while True:
     elif menu == 3:
         console.clear()
         console.print(Panel(
-            Text("Ariva Elite sistemi kapatılıyor...", style="warning"),
+            Text("Bansheenizm sistemi kapatılıyor...", style="warning"),
             border_style="red",
             box=box.DOUBLE
         ))
@@ -371,7 +371,7 @@ while True:
             if len(tel_no) != 10:
                 raise ValueError
         except ValueError as e:
-            error_msg = "Hatalı telefon numarası! Ariva Elite geçerli bir numara bekliyor."
+            error_msg = "Hatalı telefon numarası! Bansheenizm geçerli bir numara bekliyor."
             console.print(Panel(
                 Text(error_msg, style="warning"),
                 border_style="red",
@@ -391,7 +391,7 @@ while True:
             if mail and ("@" not in mail or ".com" not in mail):
                 raise ValueError
         except ValueError as e:
-            error_msg = "Hatalı mail adresi! Ariva Elite geçerli bir mail bekliyor."
+            error_msg = "Hatalı mail adresi! Bansheenizm geçerli bir mail bekliyor."
             console.print(Panel(
                 Text(error_msg, style="warning"),
                 border_style="red",
@@ -414,7 +414,7 @@ while True:
                 TimeElapsedColumn(),
                 console=console
             ) as progress:
-                task = progress.add_task("Ariva Elite Turbo Gönderim", total=None)
+                task = progress.add_task("Bansheenizm Turbo Gönderim", total=None)
                 while not dur.is_set():
                     thread = []
                     for fonk in servisler_sms:
@@ -422,7 +422,7 @@ while True:
                             t = threading.Thread(target=getattr(send_sms, fonk), daemon=True)
                             thread.append(t)
                             t.start()
-                            progress.update(task, advance=1, description=f"Ariva Elite Turbo: {fonk} gönderildi")
+                            progress.update(task, advance=1, description=f"Bansheenizm Turbo: {fonk} gönderildi")
                             total_sms_sent += 1
                             logging.info(f"Turbo SMS sent: {fonk} to {tel_no}")
                         except Exception as e:
@@ -442,7 +442,7 @@ while True:
             dur.set()
             console.clear()
             console.print(Panel(
-                Text("Ctrl+C algılandı. Ariva Elite menüye dönüyor...", style="warning"),
+                Text("Ctrl+C algılandı. Bansheenizm menüye dönüyor...", style="warning"),
                 border_style="red",
                 box=box.SQUARE
             ))
